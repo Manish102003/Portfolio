@@ -2,6 +2,34 @@
 
 {% block title %}Resume{% endblock %}
 
+{% block left-navbar %}My Resume{% endblock %}
 {% block content %}
-<h1>Resume</h1>
+<style>
+    html, body {
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        height: 100%;
+    }
+    .pdf-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #ebebeb; /* Ensure no black borders */
+    } 
+    iframe {
+        height: 100vh;
+        aspect-ratio:1;
+        {% comment %} width: fit-content; {% endcomment %}
+        border: none;
+    }
+</style>
+
+<div class="pdf-container">
+    <iframe 
+        src="{{ resume.0.resume.url }}#view=content&toolbar=0&navpanes=0&scrollbar=0"  
+        allowfullscreen
+    ></iframe>
+</div>
+
 {% endblock %}
