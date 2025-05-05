@@ -2,4 +2,4 @@ from django.shortcuts import render
 
 # Create your views here.
 def experience(request):
-    return render(request,'layout.html')
+    return render(request,'experience.html')
