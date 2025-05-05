@@ -5,6 +5,24 @@
 {% block left-navbar %}Professional Experience{% endblock %}
 {% block content %}
 
- <h1 class="text-center">Experience Page</h1>
+<div class="row row-cols-1 row-cols-md-3 mx-4 mt-4">
+    {% for exp in experiences %}
+        <div class="col" >
+            <div class="card my-3 h-100 d-flex flex-column" style="background-color: rgba(188, 222, 195, 0.81);">
+                <div class="card-body d-flex flex-column">
+                    <h4 class="card-title">{{ exp.name }}</h4>
+                    <h5 class="card-title">{{ exp.company }} - {{ exp.time }}</h5>
+                    <h6 class="card-title">Location - {{ exp.location }}</h6>
+                    <p class="card-text ">{{ exp.description }}</p>
+                    <p class="card-text">
+                        <small class="btn" style="border: 1px solid rgba(78, 158, 97, 0.81);">
+                            <a style="color: rgba(78, 158, 97, 0.81); text-decoration: none;" href="{{ exp.certificate.url }}" target="_blank">View</a>
+                        </small>
+                    </p>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
 
 {% endblock %}
