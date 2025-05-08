@@ -25,10 +25,12 @@
 </style>
 
 <div class="pdf-container ">
+    {% for res in resume %}
     <iframe 
-        src="{{ resume.0.resume.url }}#view=content&toolbar=0&navpanes=0&scrollbar=0"  
-        allowfullscreen
+    src="{{ res.resume.url }}#view=content&toolbar=0&navpanes=0&scrollbar=0"  
+    allowfullscreen
     ></iframe>
+    {% endfor %}
 </div>
 
 {% endblock %}

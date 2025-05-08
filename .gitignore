@@ -1,2 +1,3 @@
 .venv
 Features.txt
+db.sqlite3
