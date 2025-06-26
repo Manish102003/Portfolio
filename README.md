@@ -2,10 +2,6 @@
 
 A responsive and visually appealing personal portfolio website built using **HTML** and **CSS**. This website showcases my skills, projects, and contact information in a structured and professional format.
 
-## 🌐 Live Demo
-
-https://manish152003.pythonanywhere.com/  
-
 ## 🛠️ Technologies Used
 
 - **HTML5** – For semantic and structured content
